@@ -1,3 +1,5 @@
+"""Day 1"""
+
 CONST_INT = 4
 
 CONST_DOUBLE = 4.0
