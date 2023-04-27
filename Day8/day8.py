@@ -13,6 +13,6 @@ if __name__ == "__main__":
     for _ in range(0, T):
         contact_name = input()
         if contacts.get(contact_name):
-            print(contacts.get(contact_name))
+            print(str(contact_name) + "=" + str(contacts.get(contact_name)))
         else:
             print("Not found")
