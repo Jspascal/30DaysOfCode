@@ -22,7 +22,7 @@ for ($i = 0; $i < $T; $i++) {
 }
 
 for ($i = 0; $i < $T; $i++) {
-    $contact_name = readline(10);
+    $contact_name = readline();
     if (array_key_exists($contact_name, $contacts)) {
         echo $contact_name . "=" . $contacts[$contact_name] . PHP_EOL;
     } else {
