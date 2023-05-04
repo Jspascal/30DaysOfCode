@@ -8,7 +8,6 @@ fn factorial(mut number: u32) -> u32 {
     for i in 1..number {
         number *= i;
     }
-
     return number;
 }
 
