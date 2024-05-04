@@ -42,21 +42,18 @@ function convertToBinary(int $number): array
 function longestStreak(array $bin_number): int
 {
   $tmp = $streak = 0;
+  
   foreach ($bin_number as $value) {
-    if ($value == 1) {
+    if ($value === 1) {
       $tmp++;
     }
-    if ($value == 0 && $tmp >= $streak) {
-      $streak = $tmp;
-      $tmp = 0;
-    }
-    if ($value == 0 && $tmp < $streak) {
+    else {
+      $streak = max($tmp, $streak);
       $tmp = 0;
     }
   }
-  if ($tmp > $streak) {
-    $streak = $tmp;
-  }
+  $streak = max($tmp, $streak);
+  
   return $streak;
 }
 
